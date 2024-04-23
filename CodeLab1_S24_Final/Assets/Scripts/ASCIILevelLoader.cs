@@ -3,6 +3,8 @@ using System.Collections;
 using System.Collections.Generic;
 using System.IO;
 using UnityEngine;
+using UnityEngine.SceneManagement;
+using UnityEngine.Serialization;
 
 public class ASCIILevelLoader : MonoBehaviour
 {
@@ -13,6 +15,8 @@ public class ASCIILevelLoader : MonoBehaviour
 
     public GameObject level;
 
+    [FormerlySerializedAs("sceneLoaded")] public bool levelLoaded = true;
+    
     public int CurrentLevel
     {
         get
@@ -26,6 +30,7 @@ public class ASCIILevelLoader : MonoBehaviour
         }
     }
 
+    
     private void Awake()
     {
         if (loaderInstance == null)
@@ -43,7 +48,16 @@ public class ASCIILevelLoader : MonoBehaviour
     void Start()
     {
         FILE_PATH = Application.dataPath + "/Levels/Levelnum.txt";
-        LoadLevel();
+    }
+
+    private void Update()
+    {
+        if (SceneManager.GetActiveScene().name == "Ideals" && levelLoaded == false) 
+        {
+            ASCIILevelLoader.loaderInstance.currentLevel = 0;
+            LoadLevel();
+            levelLoaded = true;
+        }
     }
 
     public void LoadLevel()
@@ -83,6 +97,14 @@ public class ASCIILevelLoader : MonoBehaviour
                         
                         case 'B':
                             newObject = Instantiate(Resources.Load<GameObject>("Prefabs/Block"));
+                            break;
+                        
+                        case 'R':
+                            newObject = Instantiate(Resources.Load<GameObject>("Prefabs/RealityPrefab"));
+                            break;
+                        
+                        case 'I':
+                            newObject = Instantiate(Resources.Load<GameObject>("Prefabs/IdealsPrefab"));
                             break;
                         
                         default:

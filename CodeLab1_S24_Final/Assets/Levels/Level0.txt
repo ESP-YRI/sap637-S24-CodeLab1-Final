@@ -1,4 +1,5 @@
-BBBBBBB
-B_____B
-B_P___B
-BBBBBBB
+BBBBBBBBBBB
+B_________B
+B_P_______B
+B_______I_B
+BBBBBBBBBBB
