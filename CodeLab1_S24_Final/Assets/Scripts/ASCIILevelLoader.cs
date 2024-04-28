@@ -54,7 +54,14 @@ public class ASCIILevelLoader : MonoBehaviour
     {
         if (SceneManager.GetActiveScene().name == "Ideals" && levelLoaded == false) 
         {
-            ASCIILevelLoader.loaderInstance.currentLevel = 0;
+            currentLevel = 0;
+            LoadLevel();
+            levelLoaded = true;
+        }
+        
+        if (SceneManager.GetActiveScene().name == "Reality" && levelLoaded == false) 
+        {
+            currentLevel = 3;
             LoadLevel();
             levelLoaded = true;
         }
@@ -65,7 +72,8 @@ public class ASCIILevelLoader : MonoBehaviour
         Destroy(level);
         level = new GameObject("Level Objects");
 
-        if (currentLevel < 3)
+        if (SceneManager.GetActiveScene().name == "Ideals" && currentLevel >= 0 && currentLevel < 3 ||
+            SceneManager.GetActiveScene().name == "Reality" && currentLevel >= 3 && currentLevel < 6)
         {
             //Gets all the lines from the text file containing the level we want to load and puts them in an array
             string[] lines = File.ReadAllLines(FILE_PATH.Replace("num", currentLevel + ""));

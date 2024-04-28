@@ -134,9 +134,10 @@ GameObject:
   - component: {fileID: 66482247}
   - component: {fileID: 66482246}
   - component: {fileID: 66482245}
+  - component: {fileID: 66482248}
   m_Layer: 0
   m_Name: Reality
-  m_TagString: Untagged
+  m_TagString: Reality
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -253,6 +254,21 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &66482248
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 66482244}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3db1bce80d73e4091bd4bd87e754e369, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  assignedDialogue: {fileID: 11400000, guid: 6fc711aa768974be09346662a9617889, type: 2}
+  screenText: {fileID: 1882682459}
+  myTrigger: {fileID: 0}
 --- !u!1 &977566769
 GameObject:
   m_ObjectHideFlags: 0
@@ -384,8 +400,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 67f97dfd7d46143e1b27baab693a6da6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  questOneDone: 0
-  questTwoDone: 0
+  idealsQuestDone: 0
+  realityQuestDone: 0
 --- !u!4 &1093010064
 Transform:
   m_ObjectHideFlags: 0
@@ -770,7 +786,7 @@ GameObject:
   - component: {fileID: 2014396679}
   m_Layer: 0
   m_Name: Ideals
-  m_TagString: Untagged
+  m_TagString: Ideals
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -901,6 +917,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   assignedDialogue: {fileID: 11400000, guid: e202e5663728441d89d188b634b29570, type: 2}
   screenText: {fileID: 1882682459}
+  myTrigger: {fileID: 0}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
