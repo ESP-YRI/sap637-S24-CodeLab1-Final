@@ -13,6 +13,6 @@ MonoBehaviour:
   m_Name: RealityDialogue
   m_EditorClassIdentifier: 
   line1: Do you see the world for what it is?
-  line2: Do you understand its machinations? Do you know what to do?
-  line3: There are things you must learn yet, so you may be prepared.
+  line2: Do you understand its machinations?
+  line3: Root your ambitions in reality, and act.
   line4: 'Seek me out in the realm of truth. Your wisdom is waiting. '

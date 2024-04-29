@@ -104,7 +104,19 @@ public class ASCIILevelLoader : MonoBehaviour
                             break;
                         
                         case 'B':
-                            newObject = Instantiate(Resources.Load<GameObject>("Prefabs/Block"));
+                            newObject = Instantiate(Resources.Load<GameObject>("Prefabs/BlackStone"));
+                            break;
+                        
+                        case 'W':
+                            newObject = Instantiate(Resources.Load<GameObject>("Prefabs/WhiteStone"));
+                            break;
+                        
+                        case 'L':
+                            newObject = Instantiate(Resources.Load<GameObject>("Prefabs/BlackPortal"));
+                            break;
+                        
+                        case 'T':
+                            newObject = Instantiate(Resources.Load<GameObject>("Prefabs/WhitePortal"));
                             break;
                         
                         case 'R':
