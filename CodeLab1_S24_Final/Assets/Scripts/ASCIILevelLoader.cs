@@ -31,6 +31,7 @@ public class ASCIILevelLoader : MonoBehaviour
     }
 
     
+    //singleton code
     private void Awake()
     {
         if (loaderInstance == null)
@@ -44,7 +45,7 @@ public class ASCIILevelLoader : MonoBehaviour
         }
     }
 
-    // Start is called before the first frame update
+    // Initializes the filepath that leads to the level files
     void Start()
     {
         FILE_PATH = Application.dataPath + "/Levels/Levelnum.txt";
@@ -52,6 +53,8 @@ public class ASCIILevelLoader : MonoBehaviour
 
     private void Update()
     {
+        //sets the current level to 0 to initialize the Ideals quest (levels 0-2 are the Ideals quest)
+        //and loads that level
         if (SceneManager.GetActiveScene().name == "Ideals" && levelLoaded == false) 
         {
             currentLevel = 0;
@@ -59,6 +62,8 @@ public class ASCIILevelLoader : MonoBehaviour
             levelLoaded = true;
         }
         
+        //sets the current level to 3 to initialize the Reality quest (levels 0-2 are the Reality quest)
+        //and loads that level
         if (SceneManager.GetActiveScene().name == "Reality" && levelLoaded == false) 
         {
             currentLevel = 3;
@@ -125,6 +130,14 @@ public class ASCIILevelLoader : MonoBehaviour
                         
                         case 'I':
                             newObject = Instantiate(Resources.Load<GameObject>("Prefabs/IdealsPrefab"));
+                            break;
+                        
+                        case 'K':
+                            newObject = Instantiate(Resources.Load<GameObject>("Prefabs/WhiteSpike"));
+                            break;
+                        
+                        case 'E':
+                            newObject = Instantiate(Resources.Load<GameObject>("Prefabs/BlackSpike"));
                             break;
                         
                         default:

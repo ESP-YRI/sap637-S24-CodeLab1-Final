@@ -1,0 +1,18 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ffc2fe0faa578475692e91c5eda01ed0, type: 3}
+  m_Name: LevelIdealsDialogue
+  m_EditorClassIdentifier: 
+  line1: "It\u2019s important to hold on to your dreams for the future."
+  line2: Without hopes, we will have nowhere to go.
+  line3: "But don\u2019t forget to root them in what is possible."
+  line4: Seek the truth, and shape it into what you desire.

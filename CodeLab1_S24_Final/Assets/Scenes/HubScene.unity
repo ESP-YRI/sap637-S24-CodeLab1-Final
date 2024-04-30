@@ -433,6 +433,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   assignedDialogue: {fileID: 11400000, guid: 6fc711aa768974be09346662a9617889, type: 2}
   screenText: {fileID: 1882682459}
+  yesButton: {fileID: 0}
+  noButton: {fileID: 0}
 --- !u!1 &253177696
 GameObject:
   m_ObjectHideFlags: 0
@@ -1446,6 +1448,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   assignedDialogue: {fileID: 11400000, guid: e202e5663728441d89d188b634b29570, type: 2}
   screenText: {fileID: 1882682459}
+  yesButton: {fileID: 0}
+  noButton: {fileID: 0}
 --- !u!1 &2135706934
 GameObject:
   m_ObjectHideFlags: 0

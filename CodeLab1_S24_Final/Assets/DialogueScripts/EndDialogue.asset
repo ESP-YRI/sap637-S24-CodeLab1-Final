@@ -1,0 +1,18 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ffc2fe0faa578475692e91c5eda01ed0, type: 3}
+  m_Name: EndDialogue
+  m_EditorClassIdentifier: 
+  line1: Welcome! I've been waiting.
+  line2: I'm so happy you've made it this far.
+  line3: Did you find what you were looking for?
+  line4: Do you have your answer?

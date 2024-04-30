@@ -1,0 +1,18 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ffc2fe0faa578475692e91c5eda01ed0, type: 3}
+  m_Name: LevelRealityDialogue
+  m_EditorClassIdentifier: 
+  line1: "It\u2019s important to be realistic when planning for the future."
+  line2: "You can\u2019t get anywhere on flights of fancy alone."
+  line3: "But don\u2019t get bogged down by the limitations of the now."
+  line4: Dare to dream about what could come next.

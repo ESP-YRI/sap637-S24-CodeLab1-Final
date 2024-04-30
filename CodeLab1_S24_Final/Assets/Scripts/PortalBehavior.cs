@@ -7,11 +7,10 @@ using UnityEngine.SceneManagement;
 
 public class PortalBehavior : MonoBehaviour
 {
-
     public CircleCollider2D portalCollider;
     public SpriteRenderer portalSprite;
     
-    // Start is called before the first frame update
+    // sets the portal to be inactive by default
     void Start()
     {
         portalCollider = GetComponent<CircleCollider2D>();
@@ -19,23 +18,23 @@ public class PortalBehavior : MonoBehaviour
 
         portalCollider.enabled = false;
         portalSprite.enabled = false;
+        
     }
 
-    // Update is called once per frame
+    // if both quests are done, activates the portal object so the player can interact with it
     void Update()
     {
         if (GameManager.instance.IdealsQuestDone == true && GameManager.instance.RealityQuestDone == true)
         {
             portalCollider.enabled = true;
             portalSprite.enabled = true;
+            
         }
     }
 
+    //sends the player to the EndScene scene when they touch the portal
     private void OnTriggerStay2D(Collider2D other)
     {
-        if (Input.GetKey(KeyCode.Return))
-        {
-            SceneManager.LoadScene("EndScene");
-        }
+        SceneManager.LoadScene("EndScene");
     }
 }

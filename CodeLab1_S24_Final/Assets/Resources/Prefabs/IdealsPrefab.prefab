@@ -181,3 +181,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6f485845cea4f4461b5f890f219510d2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  assignedDialogue: {fileID: 11400000, guid: ef14d296266054802a2ad44a524b192d, type: 2}
+  screenText: {fileID: 309372064693207646, guid: 98e8cfdec78e04a8da72c927a4260f64, type: 3}

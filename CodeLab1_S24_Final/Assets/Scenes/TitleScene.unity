@@ -464,10 +464,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   IDEALS_FILE_PATH: 
   REALITY_FILE_PATH: 
-  idealsQuestDone: 0
-  idealsQuestInt: 0
-  realityQuestDone: 0
-  realityQuestInt: 0
 --- !u!4 &323216150
 Transform:
   m_ObjectHideFlags: 0

@@ -1,10 +1,12 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.IO;
 using TMPro;
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class HubNPCBehavior : MonoBehaviour
 {
@@ -12,19 +14,21 @@ public class HubNPCBehavior : MonoBehaviour
     public DialogueScriptableObject assignedDialogue;
     public TextMeshProUGUI screenText;
     private bool areTalking = false;
-
-    // Start is called before the first frame update
+    public Button yesButton;
+    public Button noButton;
+    
     void Start()
     {
+        //Enqueues the given NPC's dialogue (stored in the DialogueScriptableObject) into a queue to be used later
         npcDialogue.Enqueue(assignedDialogue.line1);
         npcDialogue.Enqueue(assignedDialogue.line2);
         npcDialogue.Enqueue(assignedDialogue.line3);
         npcDialogue.Enqueue(assignedDialogue.line4);
         
-        screenText.text = "(Approach and speak.)";
+        //The initial screen text for the hub
+        screenText.text = "(Approach and speak)";
     }
 
-    // Update is called once per frame
     void Update()
     {
         //if the player is talking with the npc, and hits enter, the dialogue progresses
@@ -48,6 +52,11 @@ public class HubNPCBehavior : MonoBehaviour
                     else if (gameObject.tag == "Reality")
                     {
                         SceneManager.LoadScene("Reality");
+                    }
+                    else if (gameObject.tag == "Ending")
+                    {
+                        yesButton.enabled = true;
+                        noButton.enabled = true;
                     }
                 }
             }
@@ -85,7 +94,7 @@ public class HubNPCBehavior : MonoBehaviour
         if (other.tag == "Player")
         {
             areTalking = false;
-            screenText.text = "(Approach and Speak.)";
+            screenText.text = "(Approach and Speak)";
         }
     }
 }

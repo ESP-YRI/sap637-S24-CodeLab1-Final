@@ -9,6 +9,8 @@ using UnityEngine;
         order = 0
     )
 ]
+
+//this scriptable object holds 4 strings, representing 4 lines of dialogue
 public class DialogueScriptableObject : ScriptableObject
 {
     public string line1;

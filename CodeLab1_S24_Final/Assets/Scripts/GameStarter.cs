@@ -7,7 +7,7 @@ using UnityEngine.SceneManagement;
 public class GameStarter : MonoBehaviour
 {
 
-    // Update is called once per frame
+    //once the player hits enter, sends them to the first scene of the game: the hub world
     void Update()
     {
         if (Input.GetKey(KeyCode.Return))
@@ -16,6 +16,8 @@ public class GameStarter : MonoBehaviour
         }
     }
 
+    //when this function runs, it erases a player's progress by setting the contents of the 
+    //files that store whether the player has completed a quest or not to 0, meaning "false"
     public void ResetProgress()
     {
         string idealsFileContents = 0 + "";

@@ -9,14 +9,13 @@ public class WASDController : MonoBehaviour
     private SpriteRenderer playerSprite;
     public float forceAmt = .5f;
     
-    // Start is called before the first frame update
     void Start()
     {
         playerRb = GetComponent<Rigidbody2D>();
         playerSprite = GetComponent<SpriteRenderer>();
     }
 
-    // Update is called once per frame
+    // Moves the player upon presses of W A S or D keys
     void Update()
     {
         if (Input.GetKey(KeyCode.W))
